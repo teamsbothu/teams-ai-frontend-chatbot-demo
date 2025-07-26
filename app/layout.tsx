@@ -1,23 +1,12 @@
-git add app/layout.tsx
-git commit -m "Add root layout for app directory"
-git push origin main
-// app/layout.tsx
-import './globals.css'; // ha van ilyen css fájlod, különben töröld ezt a sort
-import React from 'react';
-
 export const metadata = {
-  title: 'Teams AI Frontend Chatbot',
-  description: 'Microsoft Teams-stílusú frontend chatbot',
+  title: 'Teams AI Chatbot',
+  description: 'A frontend-only chatbot styled like Microsoft Teams',
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="hu">
-      <body style={{ background: 'black', color: 'white', margin: 0, fontFamily: 'sans-serif' }}>
+    <html lang="en">
+      <body style={{ backgroundColor: 'black', color: 'white' }}>
         {children}
       </body>
     </html>
